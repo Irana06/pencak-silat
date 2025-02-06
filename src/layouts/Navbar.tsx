@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import logo from "../assets/img/logo.png"
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ export const Navbar: React.FC = () => {
   const handleCollapseToggle = () => {
     setIsCollapsed(!isCollapsed);
     if (isOpen) {
-      setIsOpen(false); // Menutup menu dropdown mobile
+      setIsOpen(false);
     }
   };
 
@@ -34,14 +35,14 @@ export const Navbar: React.FC = () => {
               className={`transition-all duration-300 ${
                 isCollapsed ? "h-0 opacity-0" : "h-12 w-auto opacity-100"
               }`}
-              src="https://smkmuhpakem.sch.id/wp-content/uploads/2023/02/logo.png"
+              src={logo}
               alt="smkmupa"
             />
             <p className="sr-only">Website Title</p>
           </a>
         </div>
 
-        {/* Tombol Hamburger (Mobile) */}
+        {/* Tombol Menu (Mobile) */}
         <button
           className="md:hidden p-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition-all"
           onClick={() => setIsOpen(!isOpen)}
