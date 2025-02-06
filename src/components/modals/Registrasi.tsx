@@ -32,51 +32,160 @@ export const Registrasi: React.FC = () => {
           ></div>
 
           {/* Panel Modal */}
-          <div className="relative bg-white rounded-3xl p-10 shadow-2xl w-full max-w-sm">
-            <h2 className="text-xl font-semibold text-center mb-6">Registrasi</h2>
+          <div className="relative bg-white rounded-3xl p-10 shadow-2xl w-full max-w-4xl">
+            <h2 className="text-xl font-semibold text-center mb-6">Registrasi Kontingen</h2>
             <form className="space-y-6">
+              {/* Row pertama */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <label
+                    htmlFor="namaKontingen"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Nama Kontingen
+                  </label>
+                  <input
+                    id="namaKontingen"
+                    name="namaKontingen"
+                    type="text"
+                    placeholder="Masukkan nama kontingen"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="emailKontingen"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Email Kontingen
+                  </label>
+                  <input
+                    id="emailKontingen"
+                    name="emailKontingen"
+                    type="email"
+                    placeholder="Masukkan email kontingen"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+
+              {/* Row kedua */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <label
+                    htmlFor="password"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Password
+                  </label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="Masukkan password"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="retypePassword"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Retype Password
+                  </label>
+                  <input
+                    id="retypePassword"
+                    name="retypePassword"
+                    type="password"
+                    placeholder="Ulangi password"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+
+              {/* Row ketiga */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <label
+                    htmlFor="penanggungJawab"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Nama Penanggung Jawab
+                  </label>
+                  <input
+                    id="penanggungJawab"
+                    name="penanggungJawab"
+                    type="text"
+                    placeholder="Masukkan nama penanggung jawab"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="noTelepon"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Nomor Telepon Penanggung Jawab
+                  </label>
+                  <input
+                    id="noTelepon"
+                    name="noTelepon"
+                    type="tel"
+                    placeholder="Masukkan nomor telepon"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+
+              {/* Row keempat */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <label
+                    htmlFor="asalKontingen"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Asal Kontingen
+                  </label>
+                  <select
+                    id="asalKontingen"
+                    name="asalKontingen"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  >
+                    <option value="dalamNegeri">Dalam Negeri</option>
+                    <option value="luarNegeri">Luar Negeri</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    htmlFor="negara"
+                    className="block text-left text-sm font-medium text-gray-600"
+                  >
+                    Negara
+                  </label>
+                  <select
+                    id="negara"
+                    name="negara"
+                    className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  >
+                    <option value="indonesia">Indonesia</option>
+                    <option value="singapura">Singapura</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Row kelima */}
               <div>
                 <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-600"
+                  htmlFor="alamat"
+                  className="block text-left text-sm font-medium text-gray-600"
                 >
-                  Nama Lengkap
+                  Alamat Lengkap
                 </label>
                 <input
-                  id="name"
-                  name="name"
+                  id="alamat"
+                  name="alamat"
                   type="text"
-                  placeholder="Masukkan nama Anda"
-                  className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-600"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Masukkan email Anda"
-                  className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-600"
-                >
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="Masukkan password Anda"
+                  placeholder="Masukkan alamat lengkap"
                   className="w-full h-12 px-4 py-3 mt-2 text-gray-600 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
@@ -89,7 +198,7 @@ export const Registrasi: React.FC = () => {
                 Daftar
               </button>
             </form>
-            <p className="text-sm mt-4 text-center">
+            <p className="text-sm text-black mt-4 text-center">
               Sudah punya akun?{" "}
               <a href="/login" className="text-indigo-600 hover:text-indigo-700">
                 Masuk sekarang
