@@ -1,6 +1,6 @@
 export const Footer: React.FC = () => {
   return (
-    <div className="text-center absolute bottom-0 w-full mb-4 bg-white/80 py-6">
+    <div className="text-center absolute bottom-0 w-full bg-white/80 py-6">
       <a
         href="#"
         className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900"
